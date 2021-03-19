@@ -1,0 +1,13 @@
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 25px;
+}
+
+.menu-icon {
+    width: 24px;
+    margin: 0;
+    fill: white;
+    height: auto;
+}
