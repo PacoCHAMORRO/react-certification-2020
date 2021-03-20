@@ -15,12 +15,12 @@ exports[`matches snapshot 1`] = `
     <h3
       className="card-title"
     >
-      This is the video Title
+      This is the video title
     </h3>
     <div
       className="card-content"
     >
-      This isthen the video despcription
+      This ist hen the video despcription
     </div>
   </div>
 </div>
