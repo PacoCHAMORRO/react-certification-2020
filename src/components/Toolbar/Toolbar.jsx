@@ -7,18 +7,18 @@ import LoginButton from '../LoginButton/LoginButton';
 
 import './Toolbar.css';
 
-function Toolbar(props) {
-    console.log('que está pasando');
-    return (
-        <header className="toolbar">
-            <nav className="toolbar__navigation">
-                <DrawerToggleButton />
-                <SearchBar />
-                <ToggleSwitch>Dark Mode</ToggleSwitch>
-                <LoginButton />
-            </nav>
-        </header>
-    );
+function Toolbar() {
+  return (
+    <header className="toolbar">
+      <nav className="toolbar__navigation">
+        <DrawerToggleButton />
+        <SearchBar />
+        <div className="spacer" />
+        <ToggleSwitch>Dark Mode</ToggleSwitch>
+        <LoginButton />
+      </nav>
+    </header>
+  );
 }
 
 export default Toolbar;

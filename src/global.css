@@ -2,7 +2,7 @@ html {
   font-size: 1.125rem;
   line-height: 1.6;
   font-weight: 400;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -37,5 +37,3 @@ a:active {
   color: blueviolet;
 }
 
-hr {
-}

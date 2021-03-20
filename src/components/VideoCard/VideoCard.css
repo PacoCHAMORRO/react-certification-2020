@@ -16,3 +16,15 @@
 .card-title {
     margin: 0;
 }
+
+@media (max-width: 1124px) {
+    .card {
+        width: 40%;
+    }
+}
+
+@media (max-width: 520px) {
+    .card {
+        width: 90%;
+    }
+}

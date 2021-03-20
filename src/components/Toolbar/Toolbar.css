@@ -13,3 +13,14 @@
     display: flex;
     align-items: center;
 }
+
+.spacer {
+    flex: 1;
+}
+
+@media (max-width: 520px) {
+    .switch-container,
+    .login-btn {
+        display: none;
+    }
+}
