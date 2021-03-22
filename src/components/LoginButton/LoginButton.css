@@ -1,18 +1,20 @@
 .login-btn {
-    border: 2px solid #fff;
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    margin: 0 24px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 24px;
 }
 
 .avatar {
-    width: 18px;
-    height: 18px;
-    margin: 0;
-    fill: #fff;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  fill: #fff;
+  stroke: white;
+  stroke-width: 0.7rem;
 }

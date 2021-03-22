@@ -16,6 +16,7 @@ function App() {
             thumbnail={video.snippet.thumbnails.high.url}
             title={video.snippet.title}
             description={video.snippet.description}
+            key={video.id.videoId ? video.id.videoId : video.id.channelId}
           />
         );
       })}

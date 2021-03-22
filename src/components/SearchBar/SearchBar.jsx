@@ -10,7 +10,7 @@ function SearchBar() {
       <span>
         <Maginifier className="magnifier" />
       </span>
-      <input type="text" name="searchWord" id="" />
+      <input type="text" name="searchTerm" />
     </div>
   );
 }
