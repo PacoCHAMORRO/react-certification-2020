@@ -5,7 +5,7 @@ import './VideoCard.css';
 const VideoCard = ({ thumbnail, title, description }) => (
   <div className="card">
     <div className="thumbnail-container">
-      <img className="thumbnail" src={thumbnail} alt="" />
+      <img className="thumbnail" src={thumbnail} alt="Video snippet" />
     </div>
     <div className="card-body">
       <h3 className="card-title">{title}</h3>

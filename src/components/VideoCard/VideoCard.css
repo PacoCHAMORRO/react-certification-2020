@@ -29,11 +29,11 @@
 .card-title {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-weight: 900;
 }
 
 .card-content p {
-  font-weight: 200;
+  font-weight: 300;
   font-size: 0.8rem;
   color: #333;
 }

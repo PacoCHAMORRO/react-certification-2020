@@ -6,12 +6,12 @@ import './SearchBar.css';
 
 function SearchBar() {
   return (
-    <div className="search-bar">
+    <form onSubmit="" className="search-bar">
       <span>
         <Maginifier className="magnifier" />
       </span>
       <input type="text" name="searchTerm" />
-    </div>
+    </form>
   );
 }
 
