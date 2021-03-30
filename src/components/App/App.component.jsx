@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Layout from '../Layout/Layout.component';
 import Toolbar from '../Toolbar/Toolbar';
 import VideoCard from '../VideoCard/VideoCard';
 
-import { useVideo } from '../../utils/hooks/useVideo';
+import { useFetch } from '../../utils/hooks/useFetch';
 
 function App() {
-  const videosData = useVideo();
+  const [keyword, setKeyword] = useState('Wizeline');
+
+  const [videosData] = useFetch(keyword);
+
+  const onSearch = (text) => {
+    setKeyword(text);
+    console.log(videosData);
+  };
 
   return (
     <Layout>
-      <Toolbar />
+      <Toolbar onSearch={onSearch} />
       {videosData
         ? videosData.items.map((video) => {
             return (

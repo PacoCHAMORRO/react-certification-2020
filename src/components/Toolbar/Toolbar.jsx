@@ -7,12 +7,14 @@ import LoginButton from '../LoginButton/LoginButton';
 
 import './Toolbar.css';
 
-function Toolbar() {
+function Toolbar(props) {
+  const { onSearch } = props;
+
   return (
     <header className="toolbar">
       <nav className="toolbar__navigation">
         <DrawerToggleButton />
-        <SearchBar />
+        <SearchBar onSearch={onSearch} />
         <div className="spacer" />
         <ToggleSwitch>Dark Mode</ToggleSwitch>
         <LoginButton />
