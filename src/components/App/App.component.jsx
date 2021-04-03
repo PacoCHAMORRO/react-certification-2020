@@ -13,6 +13,8 @@ function App() {
     setKeyword(text);
   };
 
+  console.log(keyword);
+
   return (
     <Router>
       <Layout>

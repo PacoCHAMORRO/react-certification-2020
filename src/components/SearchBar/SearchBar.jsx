@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router';
 import { ReactComponent as Maginifier } from './magnifier.svg';
 
 import './SearchBar.css';
 
 function SearchBar(props) {
   const { onSearch } = props;
+  const history = useHistory();
 
   const [searchText, setSearchText] = useState('');
 
@@ -16,6 +18,7 @@ function SearchBar(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSearch(searchText);
+    history.push('/');
   };
 
   return (
