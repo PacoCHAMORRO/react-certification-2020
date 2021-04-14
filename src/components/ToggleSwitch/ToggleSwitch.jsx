@@ -2,14 +2,14 @@ import React from 'react';
 
 import './ToggleSwitch.css';
 
-function ToggleSwitch(props) {
+function ToggleSwitch({ children }) {
   return (
     <div className="switch-container">
-      <label className="switch">
-        <input type="checkbox" />
-        <span className="slider round"></span>
+      <label className="switch" htmlFor="toggled">
+        <input type="checkbox" id="toggled" />
+        <span className="slider round" />
       </label>
-      <span>Dark Mode</span>
+      <span className="switch-label">{children}</span>
     </div>
   );
 }

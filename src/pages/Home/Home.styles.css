@@ -1,8 +1,12 @@
-.homepage {
-  text-align: center;
+.card-link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.homepage h1 {
-  font-size: 3rem;
-  letter-spacing: -2px;
+.link-to {
+  color: #333;
+  display: inline-block;
+  display: flex;
+  flex-wrap: nowrap;
 }

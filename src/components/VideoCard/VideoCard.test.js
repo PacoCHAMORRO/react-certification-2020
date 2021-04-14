@@ -14,8 +14,8 @@ it('matches snapshot', () => {
     .create(
       <VideoCard
         thumbnail="https://yt3.ggpht.com/ytc/AAUvwnighSReQlmHl_S_vSfvnWBAG5Cw4A0YxtE0tm5OpQ=s800-c-k-c0xffffffff-no-rj-mo"
-        title="This is the video Title"
-        description="This isthen the video despcription"
+        title="This is the video title"
+        description="This ist hen the video despcription"
       />
     )
     .toJSON();

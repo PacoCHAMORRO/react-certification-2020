@@ -1,17 +1,38 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import { useHistory } from 'react-router';
 import { ReactComponent as Maginifier } from './magnifier.svg';
 
 import './SearchBar.css';
 
-function SearchBar() {
+function SearchBar(props) {
+  const { onSearch } = props;
+  const history = useHistory();
+
+  const [searchText, setSearchText] = useState('');
+
+  const handleInput = (e) => {
+    const text = e.target.value;
+    setSearchText(text);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSearch(searchText);
+    history.push('/');
+  };
+
   return (
-    <div className="search-bar">
+    <form onSubmit={handleSubmit} className="search-bar">
       <span>
         <Maginifier className="magnifier" />
       </span>
-      <input type="text" name="searchWord" id="" />
-    </div>
+      <input
+        type="text"
+        placeholder="Search..."
+        onChange={handleInput}
+        value={searchText}
+      />
+    </form>
   );
 }
 

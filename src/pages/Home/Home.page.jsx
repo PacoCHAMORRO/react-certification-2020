@@ -1,39 +1,40 @@
-import React, { useRef } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { useAuth } from '../../providers/Auth';
+import VideoCard from '../../components/VideoCard/VideoCard';
+
+import { useFetch } from '../../utils/hooks/useFetch';
+
 import './Home.styles.css';
 
-function HomePage() {
-  const history = useHistory();
-  const sectionRef = useRef(null);
-  const { authenticated, logout } = useAuth();
+function HomePage({ keyword }) {
+  const [videosData] = useFetch(keyword);
 
-  function deAuthenticate(event) {
-    event.preventDefault();
-    logout();
-    history.push('/');
+  let videos = null;
+
+  if (videosData) {
+    videos = (
+      <div className="card-link">
+        {videosData.items.map((video) => {
+          return (
+            <Link
+              to={`/video-detail/${video.id.videoId}`}
+              className="link-to"
+              key={video.id.videoId ? video.id.videoId : video.id.channelId}
+            >
+              <VideoCard
+                thumbnail={video.snippet.thumbnails.high.url}
+                title={video.snippet.title}
+                description={video.snippet.description}
+              />
+            </Link>
+          );
+        })}
+      </div>
+    );
   }
 
-  return (
-    <section className="homepage" ref={sectionRef}>
-      <h1>Hello stranger!</h1>
-      {authenticated ? (
-        <>
-          <h2>Good to have you back</h2>
-          <span>
-            <Link to="/" onClick={deAuthenticate}>
-              ← logout
-            </Link>
-            <span className="separator" />
-            <Link to="/secret">show me something cool →</Link>
-          </span>
-        </>
-      ) : (
-        <Link to="/login">let me in →</Link>
-      )}
-    </section>
-  );
+  return videos;
 }
 
 export default HomePage;
