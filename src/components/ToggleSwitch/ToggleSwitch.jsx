@@ -2,12 +2,12 @@ import React from 'react';
 
 import './ToggleSwitch.css';
 
-function ToggleSwitch(props) {
+function ToggleSwitch() {
   return (
     <div className="switch-container">
-      <label className="switch">
+      <label className="switch" htmlFor="theme">
         <input type="checkbox" />
-        <span className="slider round"></span>
+        <span className="slider round" />
       </label>
       <span>Dark Mode</span>
     </div>
