@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="card"
+>
+  <img
+    alt=""
+    className="thumbnail"
+    src="https://yt3.ggpht.com/ytc/AAUvwnighSReQlmHl_S_vSfvnWBAG5Cw4A0YxtE0tm5OpQ=s800-c-k-c0xffffffff-no-rj-mo"
+  />
+  <div
+    className="card-body"
+  >
+    <h3
+      className="card-title"
+    >
+      This is the video Title
+    </h3>
+    <div
+      className="card-content"
+    >
+      This isthen the video despcription
+    </div>
+  </div>
+</div>
+`;

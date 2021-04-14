@@ -1,0 +1,30 @@
+.card {
+    width: 23%;
+    border-radius: 15px;
+    box-shadow: 0px 3px 3px 3px #ccc;
+    margin: 1rem;
+    padding: .7rem;
+}
+
+.thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin: 0;
+}
+
+.card-title {
+    margin: 0;
+}
+
+@media (max-width: 1124px) {
+    .card {
+        width: 40%;
+    }
+}
+
+@media (max-width: 520px) {
+    .card {
+        width: 90%;
+    }
+}
